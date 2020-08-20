@@ -1,1 +1,33 @@
-/* pages/classic/index.wxss */
+.container{
+    height: 400px;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    /* 换行，当容器的高度过多时，被换行的元素的上下间距会平分。如果不需要平分间距的话，将容器的高度设置一下即可*/
+    /*flex-wrap: wrap;*/
+    /*不换行，默认状态下的取值*/
+    flex-wrap: nowrap;
+    /*颠倒换行*/
+    flex-wrap: wrap-reverse;
+
+
+}
+
+.chunk{
+    width: 150px;
+    height: 100px;
+}
+
+.color-1{
+    background-color: aqua;
+}
+
+.color-2{
+    background-color: palegreen;
+}
+
+.color-3{
+    background-color: lavenderblush;
+}
