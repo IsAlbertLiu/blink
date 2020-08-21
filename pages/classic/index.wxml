@@ -1,5 +1,0 @@
-<view class="container">
-    <view class="chunk color-1">1</view>
-    <view class="chunk color-2">2</view>
-    <view class="chunk color-3">3</view>
-</view>
