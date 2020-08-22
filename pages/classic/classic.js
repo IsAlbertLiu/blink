@@ -1,18 +1,24 @@
-// pages/classic/classic.js
+import {ClassicModel} from "../../models/classic";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      classicData:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      ClassicModel.getLatest(res=>{
+        console.log(res)
+        this.setData({
+          classicData:res
+        })
+      })
   },
 
   /**

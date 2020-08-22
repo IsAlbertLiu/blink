@@ -1,1 +1,1 @@
-<l-like></l-like>
+<l-like like="{{classicData.like_status}}" count="{{classicData.fav_nums}}"></l-like>
