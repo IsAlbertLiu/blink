@@ -1,17 +1,11 @@
 import {ClassicModel} from "../../models/classic";
+import {LikeModel} from "../../models/Like";
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
       classicData:null
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
       ClassicModel.getLatest(res=>{
         console.log(res)
@@ -21,30 +15,26 @@ Page({
       })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  onLike: function (event) {
+    // 参数说明：1.behavior 是否喜欢 2. this.data.classic.id 对应的 ID 编号 3.this.data.classic.type 电影类型
+    const behavior = event.detail.behavior
+    LikeModel.like(behavior, this.data.classicData.id, this.data.classicData.type)
+  },
+
   onReady: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
+
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+
   onHide: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
