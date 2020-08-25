@@ -1,5 +1,8 @@
 <view class="container">
-    <l-episode index="{{classicData.index}}"></l-episode>
-    <l-like bind:like="onLike" like="{{classicData.like_status}}" count="{{classicData.fav_nums}}"></l-like>
+    <view class="header">
+        <l-episode index="{{classicData.index}}"></l-episode>
+        <l-like bind:like="onLike" like="{{classicData.like_status}}" count="{{classicData.fav_nums}}"></l-like>
+    </view>
     <l-movie img="{{classicData.image}}" content="{{classicData.content}}"></l-movie>
+    <l-nav class="nav" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}"></l-nav>
 </view>

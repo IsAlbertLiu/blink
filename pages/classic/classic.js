@@ -3,7 +3,9 @@ import {LikeModel} from "../../models/Like";
 
 Page({
   data: {
-      classicData:null
+      classicData:null,
+      first:false,
+      latest:true
   },
 
   onLoad: function (options) {
