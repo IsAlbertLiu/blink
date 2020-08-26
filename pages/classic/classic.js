@@ -23,6 +23,15 @@ Page({
     LikeModel.like(behavior, this.data.classicData.id, this.data.classicData.type)
   },
 
+  next(event){
+
+  },
+
+  previous(event){
+    console.log(1)
+  },
+
+
   onReady: function () {
 
   },

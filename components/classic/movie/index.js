@@ -1,13 +1,12 @@
 import {ClassicModel} from "../../../models/classic";
+import {classicBeh} from "../classic-beh";
 
 Component({
+  behaviors:[classicBeh],
   /**
    * 组件的属性列表
    */
-  properties: {
-    img:String,
-    content:String
-  },
+  properties: {},
 
   /**
    * 组件的初始数据
