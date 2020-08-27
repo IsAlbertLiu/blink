@@ -7,7 +7,8 @@ Component({
   },
 
   data: {
-
+    pauseSrc:'images/player@pause.png',
+    playSrc:'images/player@play.png',
   },
 
   methods: {

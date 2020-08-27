@@ -5,7 +5,9 @@ Page({
   data: {
       classicData:null,
       first:false,
-      latest:true
+      latest:true,
+      likeCount: 0,
+      likeStatus: false
   },
 
   onLoad: function (options) {
@@ -24,14 +26,36 @@ Page({
   },
 
   next(event){
-
+    this._updateClassic('next')
   },
+
 
   previous(event){
-    console.log(1)
+    this._updateClassic('previous')
   },
 
-
+  _updateClassic(nextOrPrevious){
+    let index = this.data.classicData.index
+    ClassicModel.getClassic(index,nextOrPrevious,(res)=>{
+      this._getLikeStatus(res.id, res.type)
+      this.setData({
+        classicData:res,
+        // 更新数据
+        first:ClassicModel.isFirst(res.index),
+        latest:ClassicModel.isLatest(res.index)
+      })
+      console.log(res.type)
+    })
+  },
+  _getLikeStatus: function (artID, category) {
+    LikeModel.getClassicLikeStatus(artID, category,
+        (res) => {
+          this.setData({
+            likeCount: res.fav_nums,
+            likeStatus: res.like_status
+          })
+        })
+  },
   onReady: function () {
 
   },

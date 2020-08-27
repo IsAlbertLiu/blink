@@ -1,8 +1,10 @@
 <view class="container">
     <view class="header">
         <l-episode index="{{classicData.index}}"></l-episode>
-        <l-like bind:like="onLike" like="{{classicData.like_status}}" count="{{classicData.fav_nums}}"></l-like>
+        <l-like bind:like="onLike" like="{{likeStatus}}" count="{{likeCount}}"></l-like>
     </view>
-    <l-movie img="{{classicData.image}}" content="{{classicData.content}}"></l-movie>
+    <l-movie hidden="{{classicData.type !==100}}" img="{{classicData.image}}" content="{{classicData.content}}"></l-movie>
+    <l-music wx:if="{{classData.type === 200 }}" img="{{classicData.image}}" content="{{classicData.content}}"></l-music>
+    <l-essay hidden="{{classData.type !== 300 }}" img="{{classicData.image}}" content="{{classicData.content}}"></l-essay>
     <l-nav class="nav" bind:left="next" bind:right="previous" title="{{classicData.title}}" first="{{first}}" latest="{{latest}}"></l-nav>
 </view>

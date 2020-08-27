@@ -16,6 +16,17 @@ class LikeModel {
       }
     })
   }
+
+  // 因为每一次的加载都会储存进缓存里面，所以每一次的点赞都会从缓存里面读取，这样的话，就会导致点赞的状态不更新的错误
+  // 获取点赞的状态
+  static getClassicLikeStatus(artID,category,sCallback){
+    Http.request({
+      url:`classic/${category}/${artID}/favor`,
+      success:sCallback
+    })
+  }
+
+
 }
 
 export {

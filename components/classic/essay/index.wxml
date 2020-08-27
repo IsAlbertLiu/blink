@@ -1,2 +1,5 @@
-<!--components/classic/essay/index.wxml-->
-<text>components/classic/essay/index.wxml</text>
+<view hidden="{{hidden}}" class="movie-container">
+    <image class="img-banner" src="{{img}}"></image>
+    <image class="img-title" src="images/essay@tag.png"></image>
+    <text class="text">{{content}}</text>
+</view>

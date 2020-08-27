@@ -2,6 +2,8 @@
   "usingComponents": {
     "l-like": "/components/like/index",
     "l-movie": "/components/classic/movie/index",
+    "l-music": "/components/classic/music/index",
+    "l-essay": "/components/classic/essay/index",
     "l-episode": "/components/episode/index",
     "l-nav": "/components/navi/index"
   }
